@@ -58,6 +58,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="NHamcrestHelpers\Assert.cs" />
+    <Compile Include="NHamcrestHelpers\AssertionError.cs" />
     <Compile Include="PersonTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,6 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoMocksPlaything", "RhinoMocksPlaything\RhinoMocksPlaything.csproj", "{95365806-C72B-47A2-956C-E411C108274B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoMocksPlaything.Tests", "RhinoMocksPlaything.Tests\RhinoMocksPlaything.Tests.csproj", "{0BFD7E1D-A385-4491-AF8B-B0132DD051E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2E16C4D0-C157-4154-87A4-1104F72D7748}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +22,10 @@ Global
 		{95365806-C72B-47A2-956C-E411C108274B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95365806-C72B-47A2-956C-E411C108274B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95365806-C72B-47A2-956C-E411C108274B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFD7E1D-A385-4491-AF8B-B0132DD051E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFD7E1D-A385-4491-AF8B-B0132DD051E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFD7E1D-A385-4491-AF8B-B0132DD051E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFD7E1D-A385-4491-AF8B-B0132DD051E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
