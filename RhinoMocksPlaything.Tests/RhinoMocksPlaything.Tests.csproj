@@ -66,6 +66,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RhinoMocksPlaything\RhinoMocksPlaything.csproj">
+      <Project>{95365806-C72B-47A2-956C-E411C108274B}</Project>
+      <Name>RhinoMocksPlaything</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
