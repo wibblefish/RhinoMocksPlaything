@@ -5,6 +5,10 @@ namespace RhinoMocksPlaything
     public class Person
     {
         //// ----------------------------------------------------------------------------------------------------------
+         
+        private const string LastNameFormat = "{0}, {1}";
+        
+        //// ----------------------------------------------------------------------------------------------------------
 
         public int Id { get; protected set; }
 
@@ -20,7 +24,16 @@ namespace RhinoMocksPlaything
 
         public string FullName
         {
-            get { return null; }
+            get
+            {
+                if (FirstName != null && LastName != null)
+                    return String.Format(LastNameFormat, LastName, FirstName);
+
+                if (FirstName == null)
+                    return LastName;
+
+                return FirstName;
+            }
         }
 
         //// ----------------------------------------------------------------------------------------------------------

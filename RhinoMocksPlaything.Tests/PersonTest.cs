@@ -9,7 +9,7 @@ namespace RhinoMocksPlaything.Tests
     public class PersonTest
     {
         //// ----------------------------------------------------------------------------------------------------------
-		 
+         
         [TestMethod]
         public void DefaultConstructor_Call_ExpectIdOfZero()
         {
@@ -62,6 +62,66 @@ namespace RhinoMocksPlaything.Tests
 
             // Assert
             Assert.That(person.FullName, Is.Null());
+        }
+
+        //// ----------------------------------------------------------------------------------------------------------
+
+        [TestMethod]
+        public void FullName_PersonHasLastNameOnly_ExpectLastName()
+        {
+            // Arrange
+            var lastName = "Capes";
+            var person = new Person
+                             {
+                                 LastName = lastName
+                             };
+
+            // Act
+            var fullName = person.FullName;
+
+            // Assert
+            Assert.That(fullName, Is.EqualTo(lastName));
+        }
+
+        //// ----------------------------------------------------------------------------------------------------------
+
+        [TestMethod]
+        public void FullName_PersonHasFirstNameOnly_ExpectFirstName()
+        {
+            // Arrange
+            var firstName = "Geoff";
+            var person = new Person
+                             {
+                                 FirstName = firstName
+                             };
+
+            // Act
+            var fullName = person.FullName;
+
+            // Assert
+            Assert.That(fullName, Is.EqualTo(firstName));
+        }
+
+        //// ----------------------------------------------------------------------------------------------------------
+
+        [TestMethod]
+        public void FullName_PersonHasFirstNameAndLastName_ExpectLastNameFollowedByACommaASpaceAndFirstName()
+        {
+            // Arrange
+            var firstName = "Geoff";
+            var lastName = "Capes";
+            var person = new Person
+                             {
+                                 FirstName = firstName,
+                                 LastName = lastName
+                             };
+
+            // Act
+            var fullName = person.FullName;
+
+            // Assert
+            var expected = "Capes, Geoff";
+            Assert.That(fullName, Is.EqualTo(expected));
         }
 
         //// ----------------------------------------------------------------------------------------------------------
