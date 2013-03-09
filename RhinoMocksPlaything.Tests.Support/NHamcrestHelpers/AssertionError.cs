@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RhinoMocksPlaything.Tests.NHamcrestHelpers
+namespace RhinoMocksPlaything.Tests.Support.NHamcrestHelpers
 {
     public class AssertionError : Exception
     {

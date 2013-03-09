@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0BFD7E1D-A385-4491-AF8B-B0132DD051E9}</ProjectGuid>
+    <ProjectGuid>{4B716F0F-C0BB-492C-8CAD-8DF1777B7916}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RhinoMocksPlaything.Tests</RootNamespace>
-    <AssemblyName>RhinoMocksPlaything.Tests</AssemblyName>
+    <RootNamespace>RhinoMocksPlaything.Repositories.Tests</RootNamespace>
+    <AssemblyName>RhinoMocksPlaything.Repositories.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,13 +58,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="PersonTest.cs" />
+    <Compile Include="PersonRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RhinoMocksPlaything.Repositories\RhinoMocksPlaything.Repositories.csproj">
+      <Project>{44782598-AE08-4FFC-9042-D41246BB10D1}</Project>
+      <Name>RhinoMocksPlaything.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RhinoMocksPlaything.Tests.Support\RhinoMocksPlaything.Tests.Support.csproj">
       <Project>{f6003665-77a3-4e06-aaed-5a740a8de05c}</Project>
       <Name>RhinoMocksPlaything.Tests.Support</Name>

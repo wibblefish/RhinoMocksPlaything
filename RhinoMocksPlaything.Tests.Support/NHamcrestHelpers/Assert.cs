@@ -1,18 +1,18 @@
 ﻿using NHamcrest;
 
-namespace RhinoMocksPlaything.Tests.NHamcrestHelpers
+namespace RhinoMocksPlaything.Tests.Support.NHamcrestHelpers
 {
     public static class Assert
     {
         //// ----------------------------------------------------------------------------------------------------------
-		 
+         
         public static void That<T>(T actual, IMatcher<T> matcher)
         {
             That(actual, matcher, "");
         }
 
         //// ----------------------------------------------------------------------------------------------------------
-		 
+         
         private static void That<T>(T actual, IMatcher<T> matcher, string reason)
         {
             if (matcher.Matches(actual))

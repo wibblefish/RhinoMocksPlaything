@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHamcrest.Core;
 
-using Assert = RhinoMocksPlaything.Tests.NHamcrestHelpers.Assert;
+using Assert = RhinoMocksPlaything.Tests.Support.NHamcrestHelpers.Assert;
 
 namespace RhinoMocksPlaything.Tests
 {
