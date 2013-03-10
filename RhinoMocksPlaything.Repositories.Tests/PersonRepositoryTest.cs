@@ -48,7 +48,7 @@ namespace RhinoMocksPlaything.Repositories.Tests
             // Arrange
             var context = MockRepository.GenerateStub<IContext>();
             var people = MockRepository.GenerateStub<IDbSet<Person>>();
-            SetupResult.For(context.People).Return(people);
+            context.Stub(c => c.People).Return(people);
 
             var repository = new PersonRepository(context);
 
