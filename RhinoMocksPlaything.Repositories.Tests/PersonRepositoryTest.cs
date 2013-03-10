@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Rhino.Mocks;
 
@@ -37,6 +38,27 @@ namespace RhinoMocksPlaything.Repositories.Tests
             repository.Insert(person);
 
             // Assert
+        }
+
+        //// ----------------------------------------------------------------------------------------------------------
+
+        [TestMethod]
+        public void Insert_Person_ExpectPersonToBeAddedToContext()
+        {
+            // Arrange
+            var context = MockRepository.GenerateStub<IContext>();
+            var people = MockRepository.GenerateStub<IDbSet<Person>>();
+            SetupResult.For(context.People).Return(people);
+
+            var repository = new PersonRepository(context);
+
+            var person = new Person();
+
+            // Act
+            repository.Insert(person);
+
+            // Assert
+            people.AssertWasCalled(p => p.Add(person));
         }
 
         //// ----------------------------------------------------------------------------------------------------------

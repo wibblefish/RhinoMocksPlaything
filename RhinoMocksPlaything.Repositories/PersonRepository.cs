@@ -42,7 +42,7 @@ namespace RhinoMocksPlaything.Repositories
          
         public void Insert(Person person)
         {
-            throw new NotImplementedException();
+            context.People.Add(person);
         }
 
         //// ----------------------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ namespace RhinoMocksPlaything.Repositories
 
         //// ----------------------------------------------------------------------------------------------------------
 
-        protected virtual void Dispose(bool disposing)
+        protected void Dispose(bool disposing)
         {
             if (!disposed)
             {
