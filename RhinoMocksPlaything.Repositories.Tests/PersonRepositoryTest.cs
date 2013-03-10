@@ -42,6 +42,28 @@ namespace RhinoMocksPlaything.Repositories.Tests
 
         //// ----------------------------------------------------------------------------------------------------------
 
+        // NOTE : Is this test actually worthwhile?
+        [TestMethod]
+        public void Insert_Person_ExpectPeopleCollectionToBeInvolved()
+        {
+            // Arrange
+            var context = MockRepository.GenerateStub<IContext>();
+            var people = MockRepository.GenerateStub<IDbSet<Person>>();
+            context.Stub(c => c.People).Return(people);
+
+            var repository = new PersonRepository(context);
+
+            var person = new Person();
+
+            // Act
+            repository.Insert(person);
+
+            // Assert
+            context.AssertWasCalled(c => c.People);
+        }
+
+        //// ----------------------------------------------------------------------------------------------------------
+
         [TestMethod]
         public void Insert_Person_ExpectPersonToBeAddedToContext()
         {
