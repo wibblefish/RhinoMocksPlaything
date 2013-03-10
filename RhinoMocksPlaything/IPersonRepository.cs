@@ -1,13 +1,27 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 
 namespace RhinoMocksPlaything
 {
     [ContractClass(typeof(PersonRepositoryContract))]
-    public interface IPersonRepository
+    public interface IPersonRepository : IDisposable
     {
         //// ----------------------------------------------------------------------------------------------------------
 
-        void Save(Person person);
+        IEnumerable<Person> People { get; }
+
+        //// ----------------------------------------------------------------------------------------------------------
+         
+        Person GetPersonById(int id);
+        
+        //// ----------------------------------------------------------------------------------------------------------
+         
+        void Insert(Person person);
+
+        //// ----------------------------------------------------------------------------------------------------------
+         
+        void Save();
 
         //// ----------------------------------------------------------------------------------------------------------
     }
