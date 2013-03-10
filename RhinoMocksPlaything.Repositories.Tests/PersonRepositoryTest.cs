@@ -11,6 +11,21 @@ namespace RhinoMocksPlaything.Repositories.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
+        public void Constructor_NullContext_ExpectArgumentNullException()
+        {
+            // Arrange
+            IContext context = null;
+
+            // Act
+            var repository = new PersonRepository(context);
+
+            // Assert
+        }
+
+        //// ----------------------------------------------------------------------------------------------------------
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void Insert_NullPerson_ExpectArgumentNullException()
         {
             // Arrange

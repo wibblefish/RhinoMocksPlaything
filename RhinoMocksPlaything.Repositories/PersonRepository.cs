@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 
 namespace RhinoMocksPlaything.Repositories
@@ -18,6 +19,8 @@ namespace RhinoMocksPlaything.Repositories
         
         public PersonRepository(IContext context)
         {
+            Contract.Requires<ArgumentNullException>(context != null);
+
             this.context = context;
         }
 
